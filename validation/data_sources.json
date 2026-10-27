@@ -1,0 +1,1067 @@
+{
+ "model": "chaoliangUNSW/Jev-Style-2B-Decision-v4",
+ "note": "Every source in the training rows of this model (88 sources). licence_recorded = the licence field stored with the rows in the training pool (one entry per distinct value; 'generated...' = generated for this project). components = the mixture-table rows of the model card. link = the dataset repository the rows were built from (the mirror when one was used), where one exists. origin = rows reused from the v3 training pool or built for v4. Per-source row counts are not listed. Check each source's own terms before use; see 'Training data and licences' on the model card.",
+ "totals": {
+  "train_rows": 916923,
+  "pool_tokens": 589478732,
+  "trained_tokens_per_run": [
+   294100000,
+   294000000
+  ],
+  "pool_manifest_sha256": "abf858e8e355e877fced2111135996ae0f9eff39b94102e3d3c114fd65522fcf"
+ },
+ "sources": [
+  {
+   "id": "alisawuffles/WANLI",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/alisawuffles/WANLI",
+   "note": "written by GPT-3 and revised by crowdworkers",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "allenai/ai2_arc",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/allenai/ai2_arc",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "share_alike": true,
+   "origin": "v4"
+  },
+  {
+   "id": "allenai/aokvqa (train; mirror HuggingFaceM4/A-OKVQA)",
+   "components": [
+    "Images"
+   ],
+   "licence_recorded": [
+    "apache-2.0"
+   ],
+   "link": "https://huggingface.co/datasets/HuggingFaceM4/A-OKVQA",
+   "note": "images: COCO 2017 (Flickr photos under their own licences, COCO terms of use)",
+   "origin": "v4"
+  },
+  {
+   "id": "allenai/qasc",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/allenai/qasc",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "allenai/qasper",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/allenai/qasper",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "allenai/ropes",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/allenai/ropes",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "allenai/winogrande",
+   "components": [
+    "Language understanding"
+   ],
+   "licence_recorded": [
+    "cc-by-2.0"
+   ],
+   "link": "https://huggingface.co/datasets/allenai/winogrande",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "clinc/clinc_oos",
+   "components": [
+    "Option-format views"
+   ],
+   "licence_recorded": [
+    "cc-by-3.0"
+   ],
+   "link": "https://huggingface.co/datasets/clinc/clinc_oos",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "clinc150",
+   "components": [
+    "Intents and yes/no QA"
+   ],
+   "licence_recorded": [
+    "cc-by-3.0"
+   ],
+   "link": "https://huggingface.co/datasets/clinc/clinc_oos",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "coastalcph/lex_glue",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/coastalcph/lex_glue",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "czyssrs/FinQA",
+   "components": [
+    "Judging and scoring",
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "mit"
+   ],
+   "link": "https://github.com/czyssrs/FinQA",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "deepmind/aqua_rat",
+   "components": [
+    "Judging and scoring",
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "apache-2.0"
+   ],
+   "link": "https://huggingface.co/datasets/deepmind/aqua_rat",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "derek-thomas/ScienceQA (train)",
+   "components": [
+    "Images",
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/derek-thomas/ScienceQA",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "share_alike": true,
+   "origin": "v4"
+  },
+  {
+   "id": "facebook/textvqa (train sample; mirror lmms-lab/textvqa)",
+   "components": [
+    "Images"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/lmms-lab/textvqa",
+   "note": "images: Open Images (CC BY 2.0)",
+   "origin": "v4"
+  },
+  {
+   "id": "generated:crux_type_synth",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated for this project; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "generated:v4fam/multi_entity_sentiment",
+   "components": [
+    "Language understanding"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "texts written by a Claude / GPT model from code assignments; kept where two blind labeler models reproduce them; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "generated:v4fam/narrative_deduction",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "narratives written by a Claude / GPT model from code-built worlds; gold from code, checked by a blind solver model; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "generated:v4fam/stance_sarcasm",
+   "components": [
+    "Language understanding"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "texts written by Claude / GPT models from code specs; kept where two blind labeler models agree; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "generated:v4fam/synthetic_intents",
+   "components": [
+    "Retrieval and classification"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "messages written by a Claude / GPT model; kept where a blind verifier model picks the same intent; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "google-deepmind/habermas_machine (train; mirror mjang01011/cs329x-habermas-dataset)",
+   "components": [
+    "Judging and scoring",
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "apache-2.0"
+   ],
+   "link": "https://huggingface.co/datasets/mjang01011/cs329x-habermas-dataset",
+   "note": "upstream github.com/google-deepmind/habermas_machine (Apache-2.0); the mirror card has no licence field; part of the rows use the dataset's own human rating distributions as soft labels",
+   "origin": "v4"
+  },
+  {
+   "id": "google-research-datasets/mbpp",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/google-research-datasets/mbpp",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "google-research-datasets/schema_guided_dstc8",
+   "components": [
+    "Retrieval and classification"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/google-research-datasets/schema_guided_dstc8",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "share_alike": true,
+   "origin": "v4"
+  },
+  {
+   "id": "google/boolq",
+   "components": [
+    "Intents and yes/no QA"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-3.0"
+   ],
+   "link": "https://huggingface.co/datasets/google/boolq",
+   "share_alike": true,
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "google/civil_comments",
+   "components": [
+    "Safety themes"
+   ],
+   "licence_recorded": [
+    "cc0-1.0"
+   ],
+   "link": "https://huggingface.co/datasets/google/civil_comments",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "hardfam:F1",
+   "components": [
+    "Hard cases"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "hard-case family written by an OpenAI GPT model; labels computed by code",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "hardfam:F2",
+   "components": [
+    "Hard cases"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "hard-case family generated by code",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "hardfam:F3",
+   "components": [
+    "Hard cases"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "hard-case family generated by code",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "hardfam:F6",
+   "components": [
+    "Hard cases"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "hard-case family written by an OpenAI GPT model; labels computed by code",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "hardfam:F9",
+   "components": [
+    "Hard cases"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "hard-case family generated by code",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "hover-nlp/hover",
+   "components": [
+    "Retrieval and classification"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/hover-nlp/hover",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "share_alike": true,
+   "origin": "v4"
+  },
+  {
+   "id": "hugosousa/TimeQA",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "bsd-3-clause-clear"
+   ],
+   "link": "https://huggingface.co/datasets/hugosousa/TimeQA",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "iabufarha/iSarcasmEval task A en (train; mirror tlam25/iSarcasm_taskA)",
+   "components": [
+    "Language understanding"
+   ],
+   "licence_recorded": [
+    "mit"
+   ],
+   "link": "https://huggingface.co/datasets/tlam25/iSarcasm_taskA",
+   "note": "upstream github.com/iabufarha/iSarcasmEval (MIT); the mirror card says Apache-2.0; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "jackhhao/jailbreak-classification",
+   "components": [
+    "Safety themes"
+   ],
+   "licence_recorded": [
+    "apache-2.0"
+   ],
+   "link": "https://huggingface.co/datasets/jackhhao/jailbreak-classification",
+   "note": "its jailbreak prompts come from the jailbreak_llms collection (research purposes only); part of the benign prompts come from GPTeacher (generated by GPT-4)",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "jmhessel/newyorker_caption_contest",
+   "components": [
+    "Arts and taste"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/jmhessel/newyorker_caption_contest",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "Lakera/gandalf_ignore_instructions",
+   "components": [
+    "Safety themes"
+   ],
+   "licence_recorded": [
+    "mit"
+   ],
+   "link": "https://huggingface.co/datasets/Lakera/gandalf_ignore_instructions",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "lasha-nlp/CONDAQA",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "apache-2.0"
+   ],
+   "link": "https://huggingface.co/datasets/lasha-nlp/CONDAQA",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "legacy:generated_rules:approved_earliest",
+   "components": [
+    "Mac agent checks"
+   ],
+   "licence_recorded": [
+    "generated:round-1 project collectors and rule generator (mac_laya.tasks / trajectory_v2); no third-party text"
+   ],
+   "link": null,
+   "note": "generated for this project",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "legacy:generated_rules:cost_under_limit",
+   "components": [
+    "Mac agent checks"
+   ],
+   "licence_recorded": [
+    "generated:round-1 project collectors and rule generator (mac_laya.tasks / trajectory_v2); no third-party text"
+   ],
+   "link": null,
+   "note": "generated for this project",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "legacy:generated_rules:priority_max",
+   "components": [
+    "Mac agent checks"
+   ],
+   "licence_recorded": [
+    "generated:round-1 project collectors and rule generator (mac_laya.tasks / trajectory_v2); no third-party text"
+   ],
+   "link": null,
+   "note": "generated for this project",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "legacy:generated_rules:team_min_amount",
+   "components": [
+    "Mac agent checks"
+   ],
+   "licence_recorded": [
+    "generated:round-1 project collectors and rule generator (mac_laya.tasks / trajectory_v2); no third-party text"
+   ],
+   "link": null,
+   "note": "generated for this project",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "legacy:mac_v2:filesystem_policy",
+   "components": [
+    "Mac agent checks"
+   ],
+   "licence_recorded": [
+    "generated:round-1 project collectors and rule generator (mac_laya.tasks / trajectory_v2); no third-party text"
+   ],
+   "link": null,
+   "note": "generated for this project",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "Lichess/chess-puzzles",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "cc0-1.0"
+   ],
+   "link": "https://huggingface.co/datasets/Lichess/chess-puzzles",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:api_catalog",
+   "components": [
+    "Tools and automation"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated by this project's code (no third-party text); part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:aspect_review",
+   "components": [
+    "Language understanding"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "reviews written by Claude / GPT models from code blueprints; labels from code, confirmed by a blind second model; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:bpomp",
+   "components": [
+    "Arts and taste"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "limericks written by Claude / GPT models; the defects and labels are made by code; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:device_simulator",
+   "components": [
+    "Tools and automation"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated by this project's code (no third-party text); part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:gsm_templates",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated for this project; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:link_safety",
+   "components": [
+    "Retrieval and classification"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated for this project; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:long_needle",
+   "components": [
+    "Long documents"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated by this project's code (no third-party text); part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:model_selection",
+   "components": [
+    "Tools and automation"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated by this project's code (no third-party text); part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:new_domain",
+   "components": [
+    "New-domain decisions"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "documents and questions written by Claude and GPT models; answers kept where two teachers agreed; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:palette_pref",
+   "components": [
+    "Arts and taste"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated by this project's code (no third-party text); part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:sata_type",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated for this project; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:tool_catalog",
+   "components": [
+    "Tools and automation"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated by this project's code (no third-party text); part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev-synth:tool_retrieval_type",
+   "components": [
+    "Tools and automation"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated by this project's code (no third-party text); part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "macjev/long_table",
+   "components": [
+    "Long documents"
+   ],
+   "licence_recorded": [
+    "generated:cc0 (programmatic synthetic tables)"
+   ],
+   "link": null,
+   "note": "generated for this project",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "macjev_sim:goal_done",
+   "components": [
+    "Mac agent checks"
+   ],
+   "licence_recorded": [
+    "generated:macjev-sim (synthetic states written by project code; no third-party text)"
+   ],
+   "link": null,
+   "note": "the project's own simulator; part of the goal wording was paraphrased by an OpenAI GPT model",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "massive-1.1:intent",
+   "components": [
+    "Intents and yes/no QA"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/AmazonScience/massive",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "mteb/banking77",
+   "components": [
+    "Retrieval and classification"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/mteb/banking77",
+   "note": "BANKING77 by PolyAI: CC BY 4.0 upstream (https://huggingface.co/datasets/PolyAI/banking77); rows taken from the MTEB mirror, whose card says MIT; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "music-x-lab/POP909-Dataset (chord_midi labels)",
+   "components": [
+    "Arts and taste"
+   ],
+   "licence_recorded": [
+    "mit"
+   ],
+   "link": "https://github.com/music-x-lab/POP909-Dataset",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "naver-clova-ix/cord-v2 (train)",
+   "components": [
+    "Images"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/naver-clova-ix/cord-v2",
+   "origin": "v4"
+  },
+  {
+   "id": "neuralchemy/Prompt-injection-dataset",
+   "components": [
+    "Safety themes"
+   ],
+   "licence_recorded": [
+    "apache-2.0",
+    "cc-by-4.0",
+    "mit"
+   ],
+   "link": "https://huggingface.co/datasets/neuralchemy/Prompt-injection-dataset",
+   "note": "the upstream rows its card marks research-only were removed",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "nvidia/HelpSteer2",
+   "components": [
+    "Judging and scoring"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/nvidia/HelpSteer2",
+   "note": "responses mostly written by NVIDIA Nemotron models and Mixtral-8x7B-Instruct; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API); part of the rows use the dataset's own human rating distributions as soft labels",
+   "origin": "v4"
+  },
+  {
+   "id": "nvidia/HelpSteer3",
+   "components": [
+    "Judging and scoring"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/nvidia/HelpSteer3",
+   "note": "responses written by language models (rated by humans); part of the rows use the dataset's own human rating distributions as soft labels",
+   "origin": "v4"
+  },
+  {
+   "id": "nvidia/When2Call",
+   "components": [
+    "Tools and automation"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/nvidia/When2Call",
+   "note": "synthetic tool-use conversations generated with language models by NVIDIA; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "openai/gsm8k",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "mit"
+   ],
+   "link": "https://huggingface.co/datasets/openai/gsm8k",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "openlifescienceai/medmcqa",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "apache-2.0"
+   ],
+   "link": "https://huggingface.co/datasets/openlifescienceai/medmcqa",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "ParticleMedia/RAGTruth (train; mirror wandb/RAGTruth-processed)",
+   "components": [
+    "Retrieval and classification"
+   ],
+   "licence_recorded": [
+    "mit"
+   ],
+   "link": "https://huggingface.co/datasets/wandb/RAGTruth-processed",
+   "note": "upstream github.com/ParticleMedia/RAGTruth (MIT); responses written by language models (hallucination spans annotated by humans); part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "rajpurkar/squad_v2",
+   "components": [
+    "Safety themes"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/rajpurkar/squad_v2",
+   "share_alike": true,
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "Rowan/hellaswag",
+   "components": [
+    "Language understanding"
+   ],
+   "licence_recorded": [
+    "mit"
+   ],
+   "link": "https://huggingface.co/datasets/Rowan/hellaswag",
+   "note": "MIT only in the card text (no licence field); the original GitHub repository is blocked after a DMCA notice from wikiHow; only the ActivityNet-caption items were used; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "stanfordnlp/contract-nli",
+   "components": [
+    "Language understanding"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://github.com/stanfordnlp/contract-nli",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "stanfordnlp/snli",
+   "components": [
+    "Language understanding"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/stanfordnlp/snli",
+   "note": "SNLI train pairs plus adversarial hypotheses written by a Claude / GPT model, kept where two blind labeler models agree; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "share_alike": true,
+   "origin": "v4"
+  },
+  {
+   "id": "synth-v4:algo_reasoning",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated for this project; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "synth:causal_graph_scm",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated for this project; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "synth:clinical_trial_reports",
+   "components": [
+    "Language understanding"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated for this project; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "synth:reasoning_relevance",
+   "components": [
+    "Retrieval and classification"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "generated for this project; part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "tasksource/esci",
+   "components": [
+    "Retrieval and classification"
+   ],
+   "licence_recorded": [
+    "apache-2.0"
+   ],
+   "link": "https://huggingface.co/datasets/tasksource/esci",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "tau/commonsense_qa",
+   "components": [
+    "Knowledge and reasoning"
+   ],
+   "licence_recorded": [
+    "mit"
+   ],
+   "link": "https://huggingface.co/datasets/tau/commonsense_qa",
+   "note": "part of the rows use soft labels distilled from TypeSafe Jev 1.14 (via its public API)",
+   "origin": "v4"
+  },
+  {
+   "id": "teacher:themes_jailbreak",
+   "components": [
+    "Safety themes"
+   ],
+   "licence_recorded": [
+    "generated:claude-opus-5.5"
+   ],
+   "link": null,
+   "note": "jailbreak and toxicity prompts written and labelled by an Anthropic Claude model",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "theatticusproject/maud",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/theatticusproject/maud",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "tonytan48/TempReason",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-3.0"
+   ],
+   "link": "https://huggingface.co/datasets/tonytan48/TempReason",
+   "share_alike": true,
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "TrustAIRLab/in-the-wild-jailbreak-prompts",
+   "components": [
+    "Safety themes"
+   ],
+   "licence_recorded": [
+    "mit"
+   ],
+   "link": "https://huggingface.co/datasets/TrustAIRLab/in-the-wild-jailbreak-prompts",
+   "note": "prompts from the jailbreak_llms collection, which states it is for research purposes only",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "typed_synthetic",
+   "components": [
+    "Typed decisions (v3)"
+   ],
+   "licence_recorded": [
+    "generated"
+   ],
+   "link": null,
+   "note": "model-written business workflows: designed by OpenAI GPT and Anthropic Claude models, labelled by Claude models",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "ucinlp/drop",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/ucinlp/drop",
+   "share_alike": true,
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "UCLNLP/sharc",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "cc-by-sa-3.0"
+   ],
+   "link": "https://huggingface.co/datasets/UCLNLP/sharc",
+   "share_alike": true,
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "VQAv2 (train sample; mirror lmms-lab/VQAv2)",
+   "components": [
+    "Images"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/lmms-lab/VQAv2",
+   "note": "images: COCO train2014 (Flickr photos under their own licences, COCO terms of use)",
+   "origin": "v4"
+  },
+  {
+   "id": "wenhu/tab_fact",
+   "components": [
+    "Public reading tasks"
+   ],
+   "licence_recorded": [
+    "cc-by-4.0"
+   ],
+   "link": "https://huggingface.co/datasets/wenhu/tab_fact",
+   "origin": "v3 training pool (reused)"
+  },
+  {
+   "id": "yanismiraoui/prompt_injections",
+   "components": [
+    "Safety themes"
+   ],
+   "licence_recorded": [
+    "apache-2.0"
+   ],
+   "link": "https://huggingface.co/datasets/yanismiraoui/prompt_injections",
+   "origin": "v3 training pool (reused)"
+  }
+ ]
+}

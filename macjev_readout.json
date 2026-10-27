@@ -1,0 +1,22 @@
+{
+ "template": "macjev-render-v2-long-options",
+ "layout": "sb",
+ "block_size": 2048,
+ "total_context_limit": 32768,
+ "mask_mode": "block",
+ "readout": "hidden_at_arrow_dot_yes_minus_no",
+ "yes_id": 9542,
+ "no_id": 874,
+ "temperature": 0.7734836880351792,
+ "temperatures_by_qtype": {
+  "choice": 0.7698498587261627,
+  "noul": 0.824717362670051,
+  "score": 0.583566330184863
+ },
+ "selected": "soup",
+ "vision": true,
+ "image_budget_px": 262144,
+ "base": "Qwen/Qwen3.5-2B",
+ "run": "v4-main-colab-seed1",
+ "requires_reference_scorer": true
+}

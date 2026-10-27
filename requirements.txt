@@ -1,0 +1,11 @@
+# tested with: python 3.12.13, torch 2.14.1, torchvision 0.29.1, transformers 5.17.0, tokenizers 0.23.3, numpy 2.5.4,
+# pillow 13.0.0, safetensors 0.8.0
+torch==2.14.1
+torchvision==0.29.1  # required: the runtime loads the Qwen3.5 image processor at start-up
+transformers==5.17.0  # needs Qwen3.5 support (transformers.models.qwen3_5)
+tokenizers==0.23.3
+numpy==2.5.4
+pillow==13.0.0        # images (the image processor and the 1.6 MP cap)
+safetensors==0.8.0
+# optional, CUDA only (faster Gated-DeltaNet kernels; the Decision Index run used it):
+# flash-linear-attention==0.6.0

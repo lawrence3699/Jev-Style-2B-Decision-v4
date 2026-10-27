@@ -1,0 +1,60 @@
+{
+ "format": "macjev-readout-v2",
+ "model_name": "Jev-Style-2B-Decision-v4",
+ "readout": "verdict",
+ "template": "macjev-render-v2-long-options",
+ "layout": "sb",
+ "block_size": 2048,
+ "total_context_limit": 32768,
+ "question_option_limit": null,
+ "slot_tokens": {
+  "yes": {
+   "text": " yes",
+   "id": 9542
+  },
+  "no": {
+   "text": " no",
+   "id": 874
+  },
+  "verdict_slot": {
+   "text": " ->",
+   "id": 1411
+  }
+ },
+ "attention": "block-causal in the 6 full-attention layers: the input is cut into [start, stop) blocks of at most block_size tokens (state blocks; one short question block, or catalogue blocks + rubric blocks when question + options + slots exceed block_size); every block attends to all earlier tokens and to itself with no causal mask inside the block. Gated-DeltaNet layers are ordinary recurrent layers.",
+ "score": "per option k: logit[' yes'] - logit[' no'] at the k-th ' ->' slot, computed as h_slot . (w_yes - w_no) from the final normed hidden state and the tied embedding rows (float32)",
+ "probabilities": "softmax(scores / T) in canonical option order; T = temperatures.by_qtype[question type] (choice / noul / score), fitted on held-out calibration rows",
+ "images": {
+  "placeholder": "<|image_k|> in the state (k = 1..n, each exactly once) becomes <|vision_start|> + n_tokens x <|image_pad|> + <|vision_end|>; a state without placeholders gets {\"image\": \"<|image_1|>\", ...} (several: image_1..image_n) added first, as in the training data",
+  "resolution": "native, capped at max_pixels (default 1,638,400 = 1.6 MP, LANCZOS downscale, aspect kept), then sized to multiples of 32 px (patch 16 x merge 2); one image token per 32 x 32 px",
+  "encoder": "the checkpoint's own Qwen3.5 vision tower and image processor (preprocessor_config.json)",
+  "training_image_budget_px": 262144
+ },
+ "tokenizer_sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+ "budgets": {
+  "max_len": 32768,
+  "question_option_limit": null,
+  "note": "the complete input (state incl. image tokens + question + options + readout) <= max_len tokens; there is no separate question/options cap; larger inputs raise InputBudgetError, nothing is truncated"
+ },
+ "temperatures": {
+  "version": "macjev-temperature-v3-qtype",
+  "global": 0.7734836880351792,
+  "by_qtype": {
+   "choice": 0.7698498587261627,
+   "noul": 0.824717362670051,
+   "score": 0.583566330184863
+  },
+  "fitted_on": "3,325 held-out calibration rows (not training, not dev rows)",
+  "n_rows": 3325,
+  "selection": "per-question-type temperatures are used because they lowered the two-fold held-out NLL (0.2470 global -> 0.2459 per type)",
+  "fit_quality": {
+   "nll_before": 0.2618054844276844,
+   "nll_after": 0.24572888908038026,
+   "ece_before": 0.0494947223980491,
+   "ece_after": 0.02079632343761453,
+   "accuracy": 0.9154887218045112,
+   "n": 3325
+  },
+  "selected_weights": "uniform average of the final weights of two training runs (seeds 0 and 1)"
+ }
+}

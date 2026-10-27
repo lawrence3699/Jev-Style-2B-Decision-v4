@@ -1,0 +1,301 @@
+{
+  "format": "jev-style-release-v1",
+  "model_name": "Jev-Style-2B-Decision-v4",
+  "repo": "chaoliangUNSW/Jev-Style-2B-Decision-v4",
+  "generation": "v4 (fourth generation of the Jev-Style decision series)",
+  "lineage": {
+    "v1": "chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision",
+    "v1_public_gguf": "chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-GGUF",
+    "v2": "chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2",
+    "v3_0.8b": "chaoliangUNSW/Jev-Style-0.8B-Decision-v3",
+    "v3_2b": "chaoliangUNSW/Jev-Style-2B-Decision-v3",
+    "v4_2b": "chaoliangUNSW/Jev-Style-2B-Decision-v4"
+  },
+  "base_model": "Qwen/Qwen3.5-2B",
+  "base_model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "base_model_relation": "finetune",
+  "architecture": "Qwen3_5ForConditionalGeneration (24 language layers: 18 Gated DeltaNet + 6 full attention, hidden 2048, tied embeddings; the Qwen3.5 vision tower, frozen; 2,213,241,664 parameters = language 1,881,825,088 + vision 331,416,576; no multi-token-prediction head)",
+  "readout": "verdict",
+  "template": "macjev-render-v2-long-options",
+  "layout": "sb",
+  "attention": "block-causal in the 6 full-attention layers: the input is cut into [start, stop) blocks of at most block_size tokens (state blocks; one short question block, or catalogue blocks + rubric blocks when question + options + slots exceed block_size); every block attends to all earlier tokens and to itself with no causal mask inside the block. Gated-DeltaNet layers are ordinary recurrent layers.",
+  "readout_config": "readout_config.json",
+  "budgets": {
+    "max_len": 32768,
+    "question_option_limit": null,
+    "block_size": 2048,
+    "max_pixels": 1638400
+  },
+  "source": {
+    "checkpoint": "uniform average of the final weights of two full fine-tunes of Qwen/Qwen3.5-2B (seeds 0 and 1), exported as a multimodal Qwen3_5ForConditionalGeneration (bf16, 3 safetensors shards)",
+    "averaged_runs": [
+      {
+        "run": "v4-main-colab-seed0",
+        "step": 2245
+      },
+      {
+        "run": "v4-main-colab-seed1",
+        "step": 2244
+      }
+    ],
+    "averaged_weights_sha256": "0054ac40552e4c6e566394aeb827489418a3390e216d5c8f2fa984c93500354f",
+    "selection": {
+      "rule": "lowest component-macro NLL on the SAME fixed dev sample (v3 rule)",
+      "selected": "soup",
+      "dev_rows": 2400,
+      "dev_ids_sha256": "0f807b9763dcbee8bf55082e9c3059dbc9e2246ba3c7cc0c461eedcfdc66ec87",
+      "macro_nll": {
+        "seed1_final": 0.3696,
+        "seed1_final_ema": 0.3742,
+        "seed1_best": 0.3696,
+        "seed0_final": 0.3639,
+        "average_of_seed0_and_seed1_final": 0.3512
+      }
+    },
+    "checkpoint_sha256": {
+      "model-00001-of-00003.safetensors": "05b29c40bc19ad741b0d7f9aafc220595dad7c87fc735e9bd3ae8d14cb83d909",
+      "model-00002-of-00003.safetensors": "fc286df6de47b67637a968f31f5f78948a125c06708f85ed4ac1491b99e9d494",
+      "model-00003-of-00003.safetensors": "0ba7bf9c4224f44a2745f58f75634f3cebdf2432cbd0546f5ef97becd8ab5496"
+    }
+  },
+  "calibration": {
+    "version": "macjev-temperature-v3-qtype",
+    "by_qtype": {
+      "choice": 0.7698498587261627,
+      "noul": 0.824717362670051,
+      "score": 0.583566330184863
+    },
+    "global_T": 0.7734836880351792,
+    "n_rows": 3325,
+    "cal_ids_sha256": "757ebf267d11288f2b602295a8f13f47d2eb32d598c646df9a1cf210f3f5a717",
+    "two_fold_heldout_nll": {
+      "global": 0.2469615557272353,
+      "per_qtype": 0.2459016209570835
+    },
+    "fit_quality": {
+      "nll_before": 0.2618054844276844,
+      "nll_after": 0.24572888908038026,
+      "ece_before": 0.0494947223980491,
+      "ece_after": 0.02079632343761453,
+      "accuracy": 0.9154887218045112,
+      "n": 3325
+    },
+    "fitted_on": "3,325 held-out calibration rows (not training, not dev rows)"
+  },
+  "tested_with": {
+    "linux_cuda": {
+      "python": "3.12.3",
+      "torch": "2.14.1+cu130",
+      "torchvision": "0.29.1+cu130",
+      "transformers": "5.17.0",
+      "tokenizers": "0.23.3",
+      "numpy": "2.5.4",
+      "pillow": "13.0.0",
+      "safetensors": "0.8.0",
+      "flash-linear-attention": "0.6.0",
+      "triton": "3.8.0",
+      "gpu": "NVIDIA A100-SXM4-80GB",
+      "driver": "580.82.07"
+    },
+    "macos_mps": {
+      "python": "3.12.13",
+      "torch": "2.14.1",
+      "transformers": "5.17.0",
+      "tokenizers": "0.23.3"
+    }
+  },
+  "weights": {
+    "model-00001-of-00003.safetensors": "bfloat16 (multimodal export of the averaged checkpoint, shard 1 of 3)",
+    "model-00002-of-00003.safetensors": "bfloat16 (multimodal export of the averaged checkpoint, shard 2 of 3)",
+    "model-00003-of-00003.safetensors": "bfloat16 (multimodal export of the averaged checkpoint, shard 3 of 3)"
+  },
+  "runtime": {
+    "script": "jev_style_decision.py",
+    "class": "JevStyleDecision",
+    "reference_code": "src/macjev/ (the scorer the model was trained, calibrated and evaluated with)",
+    "default_dtype": "float32",
+    "dtypes": {
+      "float32": "cuda, mps, cpu",
+      "bfloat16": "cuda only (bf16 autocast; the Decision Index run)"
+    },
+    "devices": [
+      "cuda",
+      "mps",
+      "cpu"
+    ],
+    "fast_path": "CUDA default (fast=None): text-only calls with two or more questions compute the state once (block attention, cached) and score every question's blocks on that cache, batched (src/macjev/runtime/fast_text.py); calls with images or one question use the reference scorer; off on MPS and CPU",
+    "cuda_graphs": "default on CUDA in bfloat16 (cuda_graphs=None; True also in float32; CLI --cuda-graphs auto|on|off): 24 CUDA graphs, one per padded row length (64 to 8,192 tokens), recorded when the model loads (67 s on a fresh A100 VM in bfloat16 while Triton compiles the kernels, 8 s once they are cached), replay the whole forward of a text row (state + one question) with one launch; single-question text calls take them, and text calls with several questions while their replays cost less than the fast path (sum over the rows of max(1, padded length / 320) <= 15, in units of a 64-token replay), otherwise the fast path; image calls the reference scorer (src/macjev/runtime/cuda_graphs.py); off on MPS and CPU; in float32 the forward is compute-bound and the graphs gain little",
+    "gated_deltanet": "transformers Qwen3.5 layers (flash-linear-attention kernels when installed, otherwise the transformers torch fallback)",
+    "temperature": "readout_config.json temperatures.by_qtype[question type] unless overridden",
+    "compat": {
+      "category": "accepted (keyword) and ignored: temperatures are per question type",
+      "head_max": "accepted and ignored: no separate question/options cap (32,768-token total budget)"
+    }
+  },
+  "runtime_parity": {
+    "release_runtime_vs_reference": {
+      "what": "jev_style_decision.py vs macjev.train.evaluate.score_rows on the same rows (scripts/check_release_runtime.py; own held-out dev/cal rows incl. image rows)",
+      "cuda_float32": {
+        "rows": 30,
+        "max_abs_dp": 2.220446049250313e-16,
+        "decide_many_vs_single_max_abs_dp": 0.0003533151685561897,
+        "fast_path": true,
+        "cuda_graphs": false
+      },
+      "cuda_bfloat16": {
+        "rows": 30,
+        "max_abs_dp": 2.220446049250313e-16,
+        "decide_many_vs_single_max_abs_dp": 0.0,
+        "fast_path": true,
+        "cuda_graphs": true
+      },
+      "mps_float32": {
+        "rows": 25,
+        "max_abs_dp": 3.3e-16,
+        "decide_many_vs_single_max_abs_dp": 6.2e-09,
+        "fast_path": false
+      }
+    },
+    "fast_path_vs_reference_cuda_float32": {
+      "what": "60 Decision Index 0.3 public requests (605 questions), A100, float32",
+      "top1_flips": 0,
+      "median_abs_dp": 2.92e-05,
+      "max_abs_dp": 0.001,
+      "reference_batched_vs_one_by_one_median_abs_dp": 1.71e-05
+    },
+    "cuda_graphs_vs_reference": {
+      "what": "graph replay vs macjev.train.evaluate.score_rows on the same rendered rows (scripts/colab/check_cuda_graphs.py; own held-out dev/cal text rows; one A100)",
+      "bfloat16": {
+        "rows": 2470,
+        "top1_flips": 5,
+        "top1_agreement": 0.99798,
+        "median_abs_dp": 0.000574,
+        "max_abs_dp": 0.026519,
+        "scorer_ms_median": {
+          "reference": 68.45,
+          "cuda_graphs": 14.63
+        },
+        "several_questions": {
+          "requests": 80,
+          "rows": 320,
+          "top1_flips": 1,
+          "max_abs_dp": 0.028963
+        }
+      },
+      "float32": {
+        "rows": 2470,
+        "top1_flips": 0,
+        "top1_agreement": 1.0,
+        "median_abs_dp": 3e-06,
+        "max_abs_dp": 0.001043,
+        "scorer_ms_median": {
+          "reference": 80.74,
+          "cuda_graphs": 74.79
+        },
+        "several_questions": {
+          "requests": 80,
+          "rows": 320,
+          "top1_flips": 0,
+          "max_abs_dp": 0.000442
+        }
+      },
+      "gate": "pre-declared: top-1 agreement >= 0.995 (bf16) / >= 0.999 with max |dp| <= 0.005 (float32) on these rows, and >= 0.995 vs the bf16 reference on the Decision Index sample below"
+    },
+    "decision_index_sample": {
+      "what": "2,000-request stratified sample of the Decision Index 0.3 public suite, the kit's own runner, one A100 (agreement = same top option)",
+      "bfloat16_vs_float32": {
+        "what": "reference scorer, bf16 autocast vs float32",
+        "requests": 2000,
+        "questions": 16537,
+        "top1_agreement": 0.99625,
+        "top1_same": 16475,
+        "median_abs_dp": 0.001425,
+        "max_abs_dp": 0.03116
+      },
+      "bfloat16_fast_vs_bfloat16": {
+        "what": "fast path vs reference scorer, both bf16",
+        "requests": 2000,
+        "questions": 16537,
+        "top1_agreement": 0.99583,
+        "top1_same": 16468,
+        "median_abs_dp": 0.001493,
+        "max_abs_dp": 0.038257
+      },
+      "bfloat16_fast_vs_float32": {
+        "what": "fast path bf16 vs reference float32",
+        "requests": 2000,
+        "questions": 16537,
+        "top1_agreement": 0.9968,
+        "top1_same": 16484,
+        "median_abs_dp": 0.001431,
+        "max_abs_dp": 0.035721
+      },
+      "bfloat16_graphs_vs_bfloat16": {
+        "what": "CUDA graphs (fast path for larger calls) vs reference scorer, both bf16",
+        "requests": 2000,
+        "questions": 16537,
+        "top1_agreement": 0.99631,
+        "top1_same": 16476,
+        "median_abs_dp": 0.001492,
+        "max_abs_dp": 0.038257
+      },
+      "bfloat16_graphs_vs_bfloat16_fast": {
+        "what": "CUDA graphs vs fast path, both bf16",
+        "requests": 2000,
+        "questions": 16537,
+        "top1_agreement": 0.99927,
+        "top1_same": 16525,
+        "median_abs_dp": 0.0,
+        "max_abs_dp": 0.028123
+      },
+      "bfloat16_graphs_vs_float32": {
+        "what": "CUDA graphs bf16 vs reference float32",
+        "requests": 2000,
+        "questions": 16537,
+        "top1_agreement": 0.99704,
+        "top1_same": 16488,
+        "median_abs_dp": 0.001419,
+        "max_abs_dp": 0.035721
+      },
+      "gate": "top-1 agreement >= 0.995 before a precision / path is used for a full run (pre-declared)"
+    }
+  },
+  "latency_a100": {
+    "what": "750 Decision Index 0.3 public requests sampled uniformly (seed 20261027), one process, one request at a time, nothing else on the GPU, A100 80GB, bfloat16, this folder's code only; in-process request wall time in ms, model loading excluded",
+    "fast_path": {
+      "n": 750,
+      "median": 71.5,
+      "mean": 104.0,
+      "p80": 80.5,
+      "p95": 214.0,
+      "max": 2315.0
+    },
+    "cuda_graphs": {
+      "n": 750,
+      "median": 16.4,
+      "mean": 58.8,
+      "p80": 60.9,
+      "p95": 210.8,
+      "max": 2300.2
+    }
+  },
+  "training": {
+    "runs": [
+      {
+        "seed": 0,
+        "steps": 2245,
+        "training_tokens": 294100000
+      },
+      {
+        "seed": 1,
+        "steps": 2244,
+        "training_tokens": 294000000
+      }
+    ],
+    "hardware": "one NVIDIA A100 80GB per run (Google Colab)",
+    "precision": "bf16 full fine-tuning of every language-model weight; vision tower frozen",
+    "data_pool_manifest_sha256": "abf858e8e355e877fced2111135996ae0f9eff39b94102e3d3c114fd65522fcf",
+    "labels": "benchmark train splits, generators and teacher-written rows, plus soft labels distilled from TypeSafe Jev 1.14 via its public API for part of the rows",
+    "decision_index_hygiene": "de-duplicated against the public Decision Index 0.3 suite (row hashes, 8-gram and MinHash gates); no suite rows and no suite build scripts were used"
+  }
+}

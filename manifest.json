@@ -1,0 +1,194 @@
+{
+ "format": "jev-style-manifest-v1",
+ "repo": "chaoliangUNSW/Jev-Style-2B-Decision-v4",
+ "created_unix": 1793114467.175346,
+ "files": {
+  "LICENSE": {
+   "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+   "bytes": 11544
+  },
+  "NOTICE": {
+   "sha256": "35673d7b0d3acdb4332d02d3936c88b54c3abe914b5e91cad859476f29314eac",
+   "bytes": 2580
+  },
+  "README.md": {
+   "sha256": "bfb8f3d683f5f2c4ab504e79f734baf77d8420dcbd54f02b3f1604c90dc41373",
+   "bytes": 29564
+  },
+  "SHA256SUMS.json": {
+   "sha256": "74c1cd58ec35e822c95bc7af007969672e50c6dcc0ad274bbe690ad20f2a7a9f",
+   "bytes": 1163
+  },
+  "assets/receipt.png": {
+   "sha256": "413476173ea3a6e8d514bba7d2c4317e225b6b12a610c66fe02e29e8c4963c05",
+   "bytes": 18329
+  },
+  "chat_template.jinja": {
+   "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+   "bytes": 7755
+  },
+  "config.json": {
+   "sha256": "33e1fa484ada1f12a91b4a77e112ee48849e22da2b61cd7004d1128a2856aa0d",
+   "bytes": 2732
+  },
+  "generation_config.json": {
+   "sha256": "62153eb6c69f2e1f426beaa8002b7186437e949c7588167085df14e10e9c0a73",
+   "bytes": 116
+  },
+  "jev_style_decision.py": {
+   "sha256": "02c83a86a898e8aaa32c836b1652dbae3a920a84af9d1d4027bbca50bb048044",
+   "bytes": 28414
+  },
+  "macjev_readout.json": {
+   "sha256": "12ff249c10c5b8275fc17b2c8adb484c8a1dd7e642f88d76243001488646f012",
+   "bytes": 539
+  },
+  "model-00001-of-00003.safetensors": {
+   "sha256": "05b29c40bc19ad741b0d7f9aafc220595dad7c87fc735e9bd3ae8d14cb83d909",
+   "bytes": 1999936744
+  },
+  "model-00002-of-00003.safetensors": {
+   "sha256": "fc286df6de47b67637a968f31f5f78948a125c06708f85ed4ac1491b99e9d494",
+   "bytes": 1998904824
+  },
+  "model-00003-of-00003.safetensors": {
+   "sha256": "0ba7bf9c4224f44a2745f58f75634f3cebdf2432cbd0546f5ef97becd8ab5496",
+   "bytes": 427716600
+  },
+  "model.safetensors.index.json": {
+   "sha256": "f8e96e720a8410488702dc7e39ae024051f64279b0f6fbd61c473dd48bbfa6ea",
+   "bytes": 55772
+  },
+  "preprocessor_config.json": {
+   "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+   "bytes": 390
+  },
+  "readout_config.json": {
+   "sha256": "48bf987840785d42c6de84799494802003b30ded35d9e64f71625c926df5b2ab",
+   "bytes": 2961
+  },
+  "release_config.json": {
+   "sha256": "8be671930c74e9f03bf43559bcd3ae1f1430b2c5a005557eaf19b56f4ae7283e",
+   "bytes": 12484
+  },
+  "requirements.txt": {
+   "sha256": "af93cdd3f415e101d81b3bf5e6707d585a02b1af4314081c8f5d29d1e020b641",
+   "bytes": 576
+  },
+  "src/macjev/__init__.py": {
+   "sha256": "9037974847f99ec152e7fb42cae63aa813d76db6b2148af55c3b0ff4ef34ce09",
+   "bytes": 237
+  },
+  "src/macjev/backbone.py": {
+   "sha256": "c576fc29ea9cada6aa427859b45619702f5df3dfb9ac1984a5fdf30c2e337480",
+   "bytes": 4082
+  },
+  "src/macjev/eval/__init__.py": {
+   "sha256": "24c5139474644e95d5f6021344e274a1d0eaa73a4f593f30eb7b9d1e1200a258",
+   "bytes": 41
+  },
+  "src/macjev/eval/aggregate.py": {
+   "sha256": "46e912aea89da5c308d6c03b58841d9b511161aa8a51e586e2db012d54ede56b",
+   "bytes": 24432
+  },
+  "src/macjev/eval/di_v4.py": {
+   "sha256": "9948afcb28274ad07e95a26b3009627472ef2aff93b8bc78f70cb955d97d7271",
+   "bytes": 5350
+  },
+  "src/macjev/eval/metrics.py": {
+   "sha256": "2739f26faefa3dc8780372f746c0184feb2db31783f4c40e17b041911ce26168",
+   "bytes": 8448
+  },
+  "src/macjev/eval/predictions.py": {
+   "sha256": "e2d0ca226981b99d4358d18aef0e933c3d18c61e78f416a8e6a328f7983ca35c",
+   "bytes": 2667
+  },
+  "src/macjev/paths.py": {
+   "sha256": "1296704e25adcdb7c039da3bfdcf45356bcd796538ca70c1f2354f463d478f09",
+   "bytes": 1184
+  },
+  "src/macjev/readout.py": {
+   "sha256": "502b5601b4c949453fbb4b1693e3a340602b369dbaa356939e656c05bc88e2d7",
+   "bytes": 1688
+  },
+  "src/macjev/render.py": {
+   "sha256": "b22f4111f363cb62a6a018aa2563154f8041c45a76133f63784e2ca927006bbd",
+   "bytes": 11505
+  },
+  "src/macjev/render_v2.py": {
+   "sha256": "b7dfe7608ed845dcfe4fae543a1dfd60d7d38de6197d3c8392a70ed0e5ee687e",
+   "bytes": 4330
+  },
+  "src/macjev/runtime/__init__.py": {
+   "sha256": "5e35a3313481967f230787854a1a4779da4273e8b83c7d235cf8484c83e916b3",
+   "bytes": 44
+  },
+  "src/macjev/runtime/cuda_graphs.py": {
+   "sha256": "ea05e6761543ca4101f1f923c62352a235b1ddbd6520b2219523f65d08224111",
+   "bytes": 13086
+  },
+  "src/macjev/runtime/fast_text.py": {
+   "sha256": "ee36ec00e14d1a18d78895dafcdf3d2a6a574040ba4b6b9bfb87a27c85d3f56c",
+   "bytes": 12404
+  },
+  "src/macjev/runtime/v4_engine.py": {
+   "sha256": "943ae7cc048dda3efd76c5851990b2fa23d0999e2b8e8bfffb895625c1a7e1c8",
+   "bytes": 18895
+  },
+  "src/macjev/schema.py": {
+   "sha256": "38fc2286ec46940056a5be54844665dbea67ba7eb7151d8e1458296b925b5699",
+   "bytes": 4311
+  },
+  "src/macjev/serve/__init__.py": {
+   "sha256": "1e721086e07cb3302c767e57cc5414553e4c3be212759e459560405cba4ec931",
+   "bytes": 433
+  },
+  "src/macjev/serve/schema.py": {
+   "sha256": "94ab8505551e47e9f019c4f891e161a1a7ac97e5a40ac68b3d7f719c2068d96c",
+   "bytes": 9251
+  },
+  "src/macjev/train/__init__.py": {
+   "sha256": "37675669e4ab3225c2a34f747ad43000a77c9691a13dbd30bbcf8c097c9d8674",
+   "bytes": 42
+  },
+  "src/macjev/train/block_attention.py": {
+   "sha256": "0b4d7fd437d297d028ed6f4fdae39d9f150b32e3724375f6c2fc34fc2495f336",
+   "bytes": 2234
+  },
+  "src/macjev/train/data.py": {
+   "sha256": "85f3efa64edab2649fbdb2a83b725d147b95f99140715dbf935a531fded7f2d2",
+   "bytes": 12843
+  },
+  "src/macjev/train/evaluate.py": {
+   "sha256": "777689463038d47fafad0017c1faaec990d79d79b1fd2ca6a6f07875b0bdd784",
+   "bytes": 20702
+  },
+  "src/macjev/train/model.py": {
+   "sha256": "a9ae66c46d9001b43769c1b1281e39ab2399f886db406f37810ff8d3e60b6ae4",
+   "bytes": 12705
+  },
+  "src/macjev/vision.py": {
+   "sha256": "35b9ccdb98dd09c63317cb4404bfe1d64c9d91060357d9e8452714dd4f1834db",
+   "bytes": 4514
+  },
+  "tokenizer.json": {
+   "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+   "bytes": 19989325
+  },
+  "tokenizer_config.json": {
+   "sha256": "bee8eba30f0eb4af73c0fe2cd06d0f89b657d7819941c438157ec42f7c80ea87",
+   "bytes": 1123
+  },
+  "validation/data_sources.json": {
+   "sha256": "b6a6c26e240d46276ad10f87ae6de57e03a9a5fb4dd6072dfa124352990c6b3e",
+   "bytes": 29794
+  },
+  "video_preprocessor_config.json": {
+   "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+   "bytes": 385
+  }
+ },
+ "readme_hashed": true,
+ "readme_placeholder": false,
+ "note": "manifest.json hashes every file of the repo except itself, README.md included. The runtime --verify check (jev_style_decision.py) skips the documentation and evaluation records (README.md, figures/, assets/, validation/, eval_results.json) and checks every other listed file."
+}
