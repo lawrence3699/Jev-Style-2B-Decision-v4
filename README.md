@@ -22,7 +22,9 @@ tags:
 
 # Jev-Style-2B-Decision-v4
 
-**Website:** [jevstyle.com](https://jevstyle.com) · **GitHub:** [jev-style](https://github.com/lawrence3699/jev-style)
+**[Try it in your browser →](https://huggingface.co/spaces/chaoliangUNSW/jev-style-2b)** (text and images, no install)
+
+**Website:** [jevstyle.com](https://jevstyle.com) · **GitHub:** [jev-style](https://github.com/lawrence3699/jev-style) · **Collection:** [all v4 builds and the demo](https://huggingface.co/collections/chaoliangUNSW/jev-style-decision-v4-2b)
 
 **Jev-Style decision series:** [v1 · 2B](https://huggingface.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-GGUF) → [v2 · 2B](https://huggingface.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2) → [v3 · 0.8B](https://huggingface.co/chaoliangUNSW/Jev-Style-0.8B-Decision-v3) → [v3 · 2B](https://huggingface.co/chaoliangUNSW/Jev-Style-2B-Decision-v3) → **v4 · 2B (this model)**
 
@@ -135,6 +137,27 @@ compute-bound and the graphs gain little, so `auto` records them only in bfloat1
 stratified sample of the Decision Index 0.3 public suite (16,537 questions, one A100): bfloat16 picks the same top
 option as float32 on 99.6% of the questions (median |Δp| 0.0014); with CUDA graphs and the fast path, bfloat16
 agrees with the float32 reference on 99.7% and with the bfloat16 reference scorer on 99.6%.
+
+### With the jev-style package
+
+[jev-style](https://github.com/lawrence3699/jev-style) 0.6.0 or later downloads this repository at a pinned revision
+and runs this runtime behind a local systemone-compatible API, with a Playground, demos and MCP tools. Images go in
+`assets`, the way TypeSafe's API takes them.
+
+```bash
+pip install "jev-style[torch]"
+jev-style serve --release 2b-v4      # http://127.0.0.1:8765; on CUDA, --dtype bfloat16 also records the CUDA graphs
+```
+
+```python
+from jev_style import JevStyle, image, noul
+
+js = JevStyle.from_pretrained("chaoliangUNSW/Jev-Style-2B-Decision-v4")
+out = js.decide({"receipt": "r1", "policy": "Meals over 50 EUR need a manager approval."},
+                {"approval": noul("Does this receipt need a manager approval?")},
+                assets={"r1": image("assets/receipt.png")})
+out["answers"]["approval"]["noul"]   # 0.884, as in the example above
+```
 
 ## Other formats (text only)
 
